@@ -12,18 +12,18 @@
 - JUnit, jupiter, mockito, assertj
 - slf4j, log4j
 
-### task2. задача "Сапёр".
+### task3. задача "Сапёр".
 - Паттерны: MVC, builder, adapter, observer
 - Swing
 
-### task2. задача "Многопоточные вычисления" 
+### task4. задача "Многопоточные вычисления" 
 - lombok, 
 - java.util.concurrent.CompletableFuture, ExecutorService
 
-###  task2. задача "Многопоточное производство".
+###  task5. задача "Многопоточное производство".
 - synchronized, wait, notifyAll
 
-###  task2. задача "Чат"
+###  task6. задача "Чат"
 - Swing, 
 - MVC
 - jackson
