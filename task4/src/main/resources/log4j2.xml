@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Properties>
+        <property name="log.path" value="logs/app.log"/>
+        <property name="log.pattern" value="%d{HH:mm:ss.SSS} (%-5level) [%-9thread] %-20.20logger{40} : %msg%n"/>
+    </Properties>
+
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{${log.pattern}}" disableAnsi="false"/>
+        </Console>
+
+
+        <File name="LogToFile" fileName="${log.path}" append="false">
+            <PatternLayout pattern="${log.pattern}"/>
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+
+        <Logger name="ru.cft.shift" level="trace" additivity="false">
+            <AppenderRef ref="LogToConsole" level="trace"/>
+            <AppenderRef ref="LogToFile" level="error"/>
+        </Logger>
+
+        <Root level="error">
+            <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="LogToFile"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>
